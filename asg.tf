@@ -7,6 +7,7 @@ module "asg" {
   region          = var.region
   PORT            = 8080
   HEALTH          = "/health"
+  APP_ARTIFACT_VERSION = var.APP_ARTIFACT_VERSION
 } // calling other module(terraform-asg) as asg module also pass the variables to it.
 
 resource "aws_lb_listener_rule" "catalogue" {
